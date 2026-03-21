@@ -88,6 +88,8 @@ require('lazy').setup({
 
   require 'custom.plugins.hop',
 
+  require 'custom.plugins.yazi',
+
   { -- Autoformat
     'stevearc/conform.nvim',
     event = { 'BufWritePre' },
