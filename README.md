@@ -2,7 +2,7 @@
 
 - [x] Tab complete. 
 
-- [] Easy motions. 
+- [x] Easy motions. 
 
 - [] File explorer. 
 
