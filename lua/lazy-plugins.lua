@@ -86,6 +86,8 @@ require('lazy').setup({
 
   require 'kickstart.plugins.lspconfig',
 
+  require 'custom.plugins.hop',
+
   { -- Autoformat
     'stevearc/conform.nvim',
     event = { 'BufWritePre' },
