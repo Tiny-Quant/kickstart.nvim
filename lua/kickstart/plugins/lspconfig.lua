@@ -125,8 +125,8 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        pyright = {},
-        r_language_server = {},
+        -- pyright = {},
+        -- r_language_server = {},
         -- air = {},
         -- rust_analyzer = {},
         --
