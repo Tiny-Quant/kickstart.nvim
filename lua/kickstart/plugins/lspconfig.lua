@@ -125,10 +125,15 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        pyright = {},
-        r_language_server = {
-          opts = { filetypes = { 'r' } },
+
+        pyright = {
+          filetypes = { 'python' },
         },
+
+        r_language_server = {
+          filetypes = { 'r', 'rmd' },
+        },
+
         -- air = {},
         -- rust_analyzer = {},
         --
