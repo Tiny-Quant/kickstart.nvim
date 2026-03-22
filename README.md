@@ -4,7 +4,29 @@
 
 - [x] Easy motions. 
 
-- [] File explorer. 
+- [x] File explorer. 
+
+Quarto
+
+- [] Autocomplete @ from bib. 
+- [] Autocomplete @ from crossref. 
+- [] Autocomplete yaml.
+
+- [] R
+    - [x] LSP
+    - [] snippets
+
+- [] Python
+    - [x] LSP
+    - [] snippets
+
+- [] Latex 
+    - [] LSP
+    - [] snippets 
+    - [] preview
+
+- [] Zotero
+    - [] insert cite
 
 # Reference
 
