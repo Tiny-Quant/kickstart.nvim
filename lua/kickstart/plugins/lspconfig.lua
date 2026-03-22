@@ -126,7 +126,9 @@ return {
         -- clangd = {},
         -- gopls = {},
         pyright = {},
-        r_language_server = {},
+        r_language_server = {
+          opts = { filetypes = { 'r' } },
+        },
         -- air = {},
         -- rust_analyzer = {},
         --
