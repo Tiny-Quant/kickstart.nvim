@@ -1,4 +1,3 @@
--- plugins/quarto.lua
 return {
   {
     'quarto-dev/quarto-nvim',
@@ -12,15 +11,13 @@ return {
     opts = {
       lspFeatures = {
         enabled = true,
-        languages = { 'r', 'python', 'bash', 'lua' },
+        languages = { 'r', 'python', 'yaml', 'latex' },
         chunks = 'all',
-        diagnostics = {
-          enabled = true,
-        },
-        completion = {
-          enabled = true,
-        },
+        diagnostics = { enabled = true },
+        completion = { enabled = true },
       },
     },
+
+    config = function(_, opts) require('quarto').setup(opts) end,
   },
 }

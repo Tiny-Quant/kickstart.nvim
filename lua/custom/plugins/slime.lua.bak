@@ -1,0 +1,65 @@
+return {
+
+  {
+    'jpalardy/vim-slime',
+
+    init = function()
+      vim.g.slime_target = 'neovim'
+      vim.g.slime_no_mappings = true
+      vim.g.slime_python_ipython = 1
+      vim.g.slime_dispatch_ipython_pause = 100
+
+      Quarto_is_in_python_chunk = function() return require('otter.tools.functions').is_otter_language_context 'python' end
+
+      vim.cmd [[
+        function SlimeOverride_EscapeText_quarto(text)
+
+          if v:lua.Quarto_is_in_python_chunk()
+            return ["%cpaste -q\n", g:slime_dispatch_ipython_pause, a:text, "--", "\n"]
+          end
+
+          return [a:text]
+        endfunction
+      ]]
+    end,
+
+    config = function()
+      local function slime_send(text) vim.fn['slime#send'](text) end
+
+      vim.keymap.set('n', '<leader>sl', function()
+        local line = vim.api.nvim_get_current_line()
+        slime_send(line .. '\n')
+      end)
+
+      vim.keymap.set('v', '<leader>ss', function()
+        local start = vim.fn.line "'<"
+        local finish = vim.fn.line "'>"
+
+        local lines = vim.api.nvim_buf_get_lines(0, start - 1, finish, false)
+
+        slime_send(table.concat(lines, '\n') .. '\n')
+      end)
+
+      local function send_chunk()
+        local start = vim.fn.search('^```', 'bnW')
+        local finish = vim.fn.search('^```', 'nW')
+
+        if start == 0 or finish == 0 then return end
+
+        local lines = vim.api.nvim_buf_get_lines(0, start, finish - 1, false)
+
+        slime_send(table.concat(lines, '\n') .. '\n')
+      end
+
+      vim.keymap.set('n', '<leader><C-CR>', send_chunk)
+
+      vim.keymap.set('n', '<leader><C-S-CR>', function()
+        local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+
+        slime_send(table.concat(lines, '\n') .. '\n')
+      end)
+
+      vim.keymap.set('n', '<leader>cm', function() vim.fn.call('slime#config', {}) end)
+    end,
+  },
+}

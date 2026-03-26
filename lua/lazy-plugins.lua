@@ -92,6 +92,10 @@ require('lazy').setup({
 
   require 'custom.plugins.quarto',
 
+  -- require 'custom.plugins.molten',
+
+  require 'custom.plugins.quadHead',
+
   { -- Autoformat
     'stevearc/conform.nvim',
     event = { 'BufWritePre' },
