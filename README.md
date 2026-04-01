@@ -11,22 +11,21 @@ Quarto
 - [] Autocomplete @ from bib. 
 - [] Autocomplete @ from crossref. 
 - [] Autocomplete yaml.
+- [x] Snippets
 
 - [] R
     - [x] LSP
-    - [] snippets
 
 - [] Python
     - [x] LSP
-    - [] snippets
 
 - [] Latex 
     - [] LSP
-    - [] snippets 
     - [] preview
 
 - [] Zotero
     - [] insert cite
+
 
 # Reference
 

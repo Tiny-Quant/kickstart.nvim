@@ -1,6 +1,21 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Quarto snippets (leader+ir for R, leader+ip for Python)
+vim.keymap.set('n', '<leader>ir', function()
+  local snippets = require 'mini.snippets'
+  local matches = snippets.expand { insert = false }
+  local qr = vim.tbl_filter(function(s) return s.prefix == 'qr' end, matches)[1]
+  if qr then snippets.default_insert(qr) end
+end, { desc = 'Insert R code chunk' })
+
+vim.keymap.set('n', '<leader>ip', function()
+  local snippets = require 'mini.snippets'
+  local matches = snippets.expand { insert = false }
+  local qp = vim.tbl_filter(function(s) return s.prefix == 'qp' end, matches)[1]
+  if qp then snippets.default_insert(qp) end
+end, { desc = 'Insert Python code chunk' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
