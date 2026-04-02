@@ -78,3 +78,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function() vim.hl.on_yank() end,
 })
+
+-- Send cell to terminal (qmd only).
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'quarto',
+  callback = function(args) vim.keymap.set('n', '<leader><Enter>', '<cmd>QuadHeadSendCell<CR>', { buffer = args.buf, desc = 'Send Quarto cell to terminal.' }) end,
+})
