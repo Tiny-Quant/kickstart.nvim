@@ -134,6 +134,10 @@ return {
           filetypes = { 'r', 'rmd' },
         },
 
+        texlab = {
+          filetypes = { 'plaintex', 'quarto' },
+        },
+
         -- air = {},
         -- rust_analyzer = {},
         --

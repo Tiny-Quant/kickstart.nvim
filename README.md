@@ -8,20 +8,27 @@
 
 Quarto
 
-- [] Autocomplete @ from bib. 
-- [] Autocomplete @ from crossref. 
+- [x] Autocomplete @ from bib. 
+- [x] Autocomplete @ from crossref. 
 - [] Autocomplete yaml.
 - [x] Snippets
 
 - [] R
     - [x] LSP
+    - [x] Send to radian
+    - [x] Plot server
 
 - [] Python
     - [x] LSP
+    - [x] Send to ipython
 
 - [] Latex 
-    - [] LSP
-    - [] preview
+    - [x] LSP
+    - [x] preview
+    - Notes:
+        - Always write math between $$ ... $$ or $ ... $ (for inline). This ensure syntax highlighting, autocomplete, and preview.  
+        - Including {#eq-?} after the second $$ makes the equation numbered. 
+        - Use $$ \begin{align} ... \end{align} $$ if you want each line numbered. 
 
 - [] Zotero
     - [] insert cite
