@@ -5,6 +5,7 @@ return {
 
     dependencies = {
       'jmbuhr/otter.nvim',
+      'jmbuhr/cmp-pandoc-references',
       'nvim-treesitter/nvim-treesitter',
     },
 

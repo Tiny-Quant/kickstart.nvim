@@ -192,7 +192,15 @@ require('lazy').setup({
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets' },
+        default = { 'lsp', 'path', 'snippets', 'references' },
+
+        providers = {
+          references = {
+            name = 'pandoc_references',
+            module = 'cmp-pandoc-references.blink',
+            score_offset = 2,
+          },
+        },
       },
 
       -- Blink.cmp includes an optional, recommended rust fuzzy matcher,

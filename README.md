@@ -26,6 +26,11 @@ Quarto
 - [] Zotero
     - [] insert cite
 
+# Debugging 
+
+- Start by running `:checkhealth`. 
+
+- Check nvim and plugin versions. 
 
 # Reference
 
