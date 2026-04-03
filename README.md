@@ -1,39 +1,55 @@
 # Core Functionality
 
-- [x] Tab complete. 
+<!-- BEGIN CORE:TabComplete -->
+- [x] Tab complete. (`lua/lazy-plugins.lua:143` - blink.cmp)
+<!-- END CORE:TabComplete -->
 
-- [x] Easy motions. 
+<!-- BEGIN CORE:EasyMotions -->
+- [x] Easy motions. (`lua/lazy-plugins.lua:89` - hop.nvim)
+<!-- END CORE:EasyMotions -->
 
-- [x] File explorer. 
+<!-- BEGIN CORE:FileExplorer -->
+- [x] File explorer. (`lua/lazy-plugins.lua:85` - telescope.nvim)
+<!-- END CORE:FileExplorer -->
 
-Quarto
+<!-- BEGIN CORE:Quarto -->
+## Quarto 
+(`lua/custom/plugins/quarto.lua`)
 
-- [x] Autocomplete @ from bib. 
-- [x] Autocomplete @ from crossref. 
-- [] Autocomplete yaml.
-- [x] Snippets
+- [x] Autocomplete @ from bib. (`lua/custom/plugins/quarto.lua:8` - cmp-pandoc-references)
+- [x] Autocomplete @ from crossref. (`lua/custom/plugins/quarto.lua:12-18` - lspFeatures)
+- [] Autocomplete yaml. (`lua/custom/plugins/quarto.lua:15` - languages includes yaml)
+- [x] Snippets (`lua/lazy-plugins.lua:273-281` - mini.snippets)
+<!-- END CORE:Quarto -->
 
+<!-- BEGIN CORE:R -->
 - [] R
-    - [x] LSP
-    - [x] Send to radian
-    - [x] Plot server
+    - [x] LSP (`lua/kickstart/plugins/lspconfig.lua:133` - r_language_server)
+    - [x] Send to radian/Plot (`lua/keymaps.lua:89` + `lua/custom/plugins/quadHead.lua`)
+<!-- END CORE:R -->
 
+<!-- BEGIN CORE:Python -->
 - [] Python
-    - [x] LSP
-    - [x] Send to ipython
+    - [x] LSP (`lua/kickstart/plugins/lspconfig.lua:129` - pyright)
+    - [x] Send to ipython (`lua/keymaps.lua:89` + `lua/custom/plugins/quadHead.lua`)
+<!-- END CORE:Python -->
 
-- [] Latex 
-    - [x] LSP
-    - [x] preview
+<!-- BEGIN CORE:LaTeX -->
+- [] LaTex 
+    - [x] LSP (`lua/kickstart/plugins/lspconfig.lua:137` - texlab)
+    - [x] preview (`lua/keymaps.lua:19` + `lua/custom/plugins/nabla.lua`)
     - Notes:
         - Always write math between $$ ... $$ or $ ... $ (for inline). This ensure syntax highlighting, autocomplete, and preview.  
         - Including {#eq-?} after the second $$ makes the equation numbered. 
         - Use $$ \begin{align} ... \end{align} $$ if you want each line numbered. 
+<!-- END CORE:LaTeX -->
 
+<!-- BEGIN CORE:Zotero -->
 - [] Zotero
-    - [x] Insert cite
+    - [x] Insert cite (`lua/kickstart/plugins/telescope.lua:43-48` + `lua/keymaps.lua:21`)
     - Notes: 
         - Need to mount Zotero's sql database as a volumne into the containers $HOME. 
+<!-- END CORE:Zotero -->
 
 # Debugging 
 

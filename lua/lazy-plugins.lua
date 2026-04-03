@@ -82,21 +82,21 @@ require('lazy').setup({
   -- modular approach: using `require 'path.name'` will
   -- include a plugin definition from file lua/path/name.lua
 
+  -- [[ CORE:FileExplorer ]]
   require 'kickstart.plugins.telescope',
 
+  -- [[ CORE:LSP ]]
   require 'kickstart.plugins.lspconfig',
 
+  -- [[ CORE:EasyMotions ]]
   require 'custom.plugins.hop',
 
-  -- require 'custom.plugins.yazi',
-
+  -- [[ CORE:Quarto ]]
   require 'custom.plugins.quarto',
-
-  require 'custom.plugins.nabla',
-
-  -- require 'custom.plugins.molten',
-
   require 'custom.plugins.quadHead',
+
+  -- [[ CORE:LaTeX ]]
+  require 'custom.plugins.nabla',
 
   { -- Autoformat
     'stevearc/conform.nvim',
