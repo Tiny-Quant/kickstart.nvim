@@ -88,9 +88,11 @@ require('lazy').setup({
 
   require 'custom.plugins.hop',
 
-  require 'custom.plugins.yazi',
+  -- require 'custom.plugins.yazi',
 
   require 'custom.plugins.quarto',
+
+  require 'custom.plugins.nabla',
 
   -- require 'custom.plugins.molten',
 
@@ -271,7 +273,7 @@ require('lazy').setup({
       -- Snippets (VSCode JSON format)
       require('mini.snippets').setup {
         snippets = {
-          require('mini.snippets').gen_loader.from_runtime('*.json'),
+          require('mini.snippets').gen_loader.from_runtime '*.json',
         },
         mappings = {
           expand = '<C-j>',

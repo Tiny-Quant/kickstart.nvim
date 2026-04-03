@@ -16,6 +16,8 @@ vim.keymap.set('n', '<leader>ip', function()
   if qp then snippets.default_insert(qp) end
 end, { desc = 'Insert Python code chunk' })
 
+vim.keymap.set('n', '<leader>m', function() require('nabla').popup() end, { desc = '[M]ath popup' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
