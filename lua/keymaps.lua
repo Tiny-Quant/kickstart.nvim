@@ -18,6 +18,8 @@ end, { desc = 'Insert Python code chunk' })
 
 vim.keymap.set('n', '<leader>m', function() require('nabla').popup() end, { desc = '[M]ath popup' })
 
+vim.keymap.set('n', '<leader>sz', ':Telescope zotero<cr>', { desc = '[S]earch [Z]otero' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')

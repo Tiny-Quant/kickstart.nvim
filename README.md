@@ -31,7 +31,9 @@ Quarto
         - Use $$ \begin{align} ... \end{align} $$ if you want each line numbered. 
 
 - [] Zotero
-    - [] insert cite
+    - [x] Insert cite
+    - Notes: 
+        - Need to mount Zotero's sql database as a volumne into the containers $HOME. 
 
 # Debugging 
 

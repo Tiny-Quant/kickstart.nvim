@@ -38,6 +38,14 @@ return {
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+
+      -- Zotero integration
+      {
+        'jmbuhr/telescope-zotero.nvim',
+        dependencies = {
+          { 'kkharji/sqlite.lua' },
+        },
+      },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -79,6 +87,7 @@ return {
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'zotero')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
