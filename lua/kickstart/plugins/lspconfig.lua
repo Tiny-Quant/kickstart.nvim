@@ -126,17 +126,33 @@ return {
         -- clangd = {},
         -- gopls = {},
 
-        pyright = {
-          filetypes = { 'python' },
-        },
+        pyright = {},
 
-        r_language_server = {
-          filetypes = { 'r', 'rmd' },
-        },
+        -- pyright = {
+        --   filetypes = { 'python' },
+        --   settings = {
+        --     pyright = {
+        --       disableOrganizeImports = true,
+        --     },
+        --     python = {
+        --       analysis = {
+        --         typeCheckingMode = 'basic',
+        --         autoImportCompletions = true,
+        --         diagnosticMode = 'openFilesOnly',
+        --       },
+        --     },
+        --   },
+        -- },
 
-        texlab = {
-          filetypes = { 'plaintex', 'quarto' },
-        },
+        ruff = {},
+
+        -- r_language_server = {
+        --   filetypes = { 'r', 'rmd' },
+        -- },
+        --
+        -- texlab = {
+        --   filetypes = { 'plaintex', 'quarto' },
+        -- },
 
         -- air = {},
         -- rust_analyzer = {},
